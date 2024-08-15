@@ -1,21 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native';
-import Logo from './Logo'
-export default function Main(){
+import {View, Text, StyleSheet} from 'react-native'
+import CardAccount from './cardAccount'
+
+export default function Content(){
     return (
-      <View style={styles.Main}>
-        <Text style={{color: 'white'}}>Main</Text>
-        <Logo />
-      </View>
+        <View style={styles.content}>
+
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+
+        </View>
     )
 }
 
-const styles = StyleSheet.create(
-    {
-        Main: {
-            flex:2,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'black', 
-          }
-    }
-)
+const styles = StyleSheet.create({
+    content: {
+        gap: 10,
+        //backgroundColor: "#545656",
+        padding: 15
+        //justifyContent: 'center',
+        //alignItems: 'center'
+      }
+})

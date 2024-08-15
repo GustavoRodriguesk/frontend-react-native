@@ -1,54 +1,45 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Image } from 'expo-image';
-import { CgMenuRound } from "react-icons/cg";
+import { View, Text, StyleSheet} from 'react-native'
+import { Image } from 'expo-image'
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 export default function Header(){
     return (
-        
-        <View style={styles.Header}>
-          <View style={styles.user}>
-          <Image style={styles.avatar}
-          source="https://img.a.transfermarkt.technology/portrait/big/225083-1703279938.png?lm=1"/>
-          <Text style= {styles.name}>Trunks</Text>
-          <CgMenuRound style={styles.menu}/>
-
-          </View>          
+        <View style={styles.header}>
+            <View style={styles.user}>
+                <Image 
+                    style={styles.avatar}
+                    source="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Saddam_Hussein_captured_%26_shaven_DD-SD-05-01885.jpg/220px-Saddam_Hussein_captured_%26_shaven_DD-SD-05-01885.jpg"
+                />
+                <Text style={styles.name}>Gugu Gay teiro</Text>
+            </View>
+            <Ionicons style={styles.menu} name="menu" size={24} color="black" />
         </View>
     )
 }
 
-const styles = StyleSheet.create(
-    {
-         Header: {
-            flex:1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#927362',
-            justifyContent: "space-between",
-            paddingHorizontal: '15',
-            flexDirection: 'row'
-          },
-          avatar:{ 
-            width: 50,
-            height: 50,
-            borderRadius: 25
-          },
-          user:{
-            flexDirection: 'row',
-            alignItems: 'center', 
-            gap: 10
-          },
-          name: {
-            fontWeight: '600',
-            fontSize: 18
-          },
-          menu: {
-            width: 25,
-            height: 25,
-            padding: 10
-          }
+const styles = StyleSheet.create({
+    header: {
+        //backgroundColor: "#899986",
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 15,
+    },
+    user: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10
+    },
+    avatar: {
+        width: 50,
+        height: 50,
+        borderRadius: 25
+    },
+    name: {
+        fontWeight: '600',
+        fontSize: 18
+    },
+    menu: {
+        padding: 10
     }
-    
-
-    
-)
+})
