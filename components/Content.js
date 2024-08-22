@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Logo from './Logo'
+import Logo from './CardAccount'
 export default function Main(){
     return (
       <View style={styles.Main}>
