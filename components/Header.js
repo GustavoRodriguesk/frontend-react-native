@@ -8,10 +8,16 @@ export default function Header(){
             <View style={styles.user}>
                 <Image 
                     style={styles.avatar}
+<<<<<<< HEAD
                     source={require('../assets/avatar-renan.jpg')} //Local
                     //source="https://avatars.githubusercontent.com/u/4259630?v=4"
                 />
                 <Text style={styles.name}>Renan Cavichi</Text>
+=======
+                    source="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Saddam_Hussein_captured_%26_shaven_DD-SD-05-01885.jpg/220px-Saddam_Hussein_captured_%26_shaven_DD-SD-05-01885.jpg"
+                />
+                <Text style={styles.name}>Gugu Gay teiro</Text>
+>>>>>>> 6a19cefbed96640f5f8c09c84488b78ccfb0a6bb
             </View>
             <Ionicons style={styles.menu} name="menu" size={24} color="black" />
         </View>
