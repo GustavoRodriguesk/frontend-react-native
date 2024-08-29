@@ -1,23 +1,47 @@
-<<<<<<< HEAD:components/Content.js
-import { StyleSheet, Text, View } from 'react-native';
-import Logo from './CardAccount'
-export default function Main(){
-=======
-import {View, Text, StyleSheet} from 'react-native'
-import CardAccount from './cardAccount'
+import { useEffect, useState } from 'react'
+import {View, StyleSheet, Text} from 'react-native'
+import CardAccount from './cardAccount.js'
+//import CardAccount2 from './CardAccount2'
+//import Calc from './Calc'
 
 export default function Content(){
->>>>>>> 6a19cefbed96640f5f8c09c84488b78ccfb0a6bb:components/Main.js
+
+  const [accounts, setAccounts] = useState([])
+ 
+   useEffect(() => {
+        const getAccounts = async () => {
+            const response = await fetch('http://localhost:3000/account/list')
+            if(response.ok){
+              const data = await response.json()
+              console.log(data)
+              setAccounts(data.accounts)
+              return
+            }
+            console.log('Erro ao carregar accounts')
+            return
+        }
+
+        getAccounts()
+   }, [])
+
+
     return (
         <View style={styles.content}>
+        
+        {/* <Calc /> */}
 
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
+        { accounts.length === 0 && <Text>Loading...</Text>}
 
+        {
+          accounts.map( (account) => 
+            <CardAccount
+              key={account.id} 
+              service={account.service}
+              imgUrl={account.logo_image}
+              userName={account.username}
+            /> 
+          )
+        }
         </View>
     )
 }

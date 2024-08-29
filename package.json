@@ -12,24 +12,15 @@
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
     "@expo/vector-icons": "^14.0.2",
-<<<<<<< HEAD
-=======
-    "@types/react": "~18.2.79",
->>>>>>> 6a19cefbed96640f5f8c09c84488b78ccfb0a6bb
     "expo": "~51.0.24",
     "expo-image": "~1.12.13",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
-<<<<<<< HEAD
     "react-native-web": "~0.19.10",
     "typescript": "~5.3.3",
     "@types/react": "~18.2.79"
-=======
-    "react-native-web": "^0.19.12",
-    "typescript": "~5.3.3"
->>>>>>> 6a19cefbed96640f5f8c09c84488b78ccfb0a6bb
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

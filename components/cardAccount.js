@@ -1,60 +1,44 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import {View, Text, StyleSheet} from 'react-native'
+import { Image } from 'expo-image'
 
-export default function CardAccount() {
+export default function CardAccount ({ service, userName, imgUrl }) {
+
     return (
         <View style={styles.card}>
-            <Image
-                source={{ uri: 'https://i.pinimg.com/originals/f8/f9/49/f8f9490270e4439b265112518ffce09f.jpg' }} 
-                style={styles.image}
+            <Image 
+                style={styles.logo} 
+                source={imgUrl}
             />
             <View style={styles.content}>
-                <Text style={styles.title}>zap zap premium</Text>
-                <Text style={styles.description}>sopacommel@gmail.com</Text>
-
+                <Text style={styles.service}>{service}</Text>
+                <Text style={styles.username}>{userName}</Text>
             </View>
-            <AntDesign name="star" size={24} color="black"style={styles.icon}/>
-
         </View>
-    );
+    )
 }
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: '#fff',
-        borderRadius: 10,
-       display: 'flex',
-       flexDirection: 'row',
+        padding: 10,
         borderStyle: 'solid',
-        borderColor: 'gray',
+        borderColor: '#EEEEEE',
         borderWidth: 1,
-        margin: 10,
-        gap: 15,
-        padding: 25,
         flexDirection: 'row',
-        
+        gap: 15,
+        borderRadius: 10,
+        alignItems: 'center'
     },
-    image: {
-        width: 75,
-        height: 75,
-        borderRadius: 25,
+    logo:{
+        width: 60,
+        height: 60
     },
     content: {
-        marginVertical: 10,
-        alignItems: 'center',
-        
+        gap: 6
     },
-    title: {
-        fontSize: 18,
-        fontWeight: 'bold',
+    service: {
+        fontSize: 17
     },
-    description: {
-        fontSize: 14,
-        color: '#666',
-        textAlign: 'center',
-    },
-    icon: {
-        marginTop: 10,
-    },
-});
+    username: {
+        color: '#777777'
+    }
+})
