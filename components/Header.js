@@ -11,7 +11,7 @@ export default function Header(){
                     source={require('../assets/kante.webp')} //Local
                     //source="https://avatars.githubusercontent.com/u/4259630?v=4"
                 />
-                <Text style={styles.name}>Ngolo Kante</Text>
+                <Text style={styles.name}>Renan Cavichi</Text>
             </View>
             <Ionicons style={styles.menu} name="menu" size={24} color="black" />
         </View>

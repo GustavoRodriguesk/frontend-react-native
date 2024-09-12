@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import {View, StyleSheet, Text} from 'react-native'
-import CardAccount from './cardAccount.js'
+import CardAccount from './CardAccount'
 //import CardAccount2 from './CardAccount2'
 //import Calc from './Calc'
 

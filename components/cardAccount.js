@@ -1,27 +1,44 @@
 import {View, Text, StyleSheet} from 'react-native'
-import CardAccount from './CardAccount'
+import { Image } from 'expo-image'
 
-export default function Content(){
+export default function CardAccount ({ service, userName, imgUrl }) {
+
     return (
-        <View style={styles.content}>
-
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-          <CardAccount />
-
+        <View style={styles.card}>
+            <Image 
+                style={styles.logo} 
+                source={imgUrl}
+            />
+            <View style={styles.content}>
+                <Text style={styles.service}>{service}</Text>
+                <Text style={styles.username}>{userName}</Text>
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+    card: {
+        padding: 10,
+        borderStyle: 'solid',
+        borderColor: '#EEEEEE',
+        borderWidth: 1,
+        flexDirection: 'row',
+        gap: 15,
+        borderRadius: 10,
+        alignItems: 'center'
+    },
+    logo:{
+        width: 60,
+        height: 60
+    },
     content: {
-        gap: 10,
-        //backgroundColor: "#545656",
-        padding: 15
-        //justifyContent: 'center',
-        //alignItems: 'center'
-      }
+        gap: 6
+    },
+    service: {
+        fontSize: 17
+    },
+    username: {
+        color: '#777777'
+    }
 })

@@ -1,9 +1,7 @@
 import {View, Text, StyleSheet} from 'react-native'
 import { Image } from 'expo-image'
-import EvilIcons from '@expo/vector-icons/EvilIcons';
 
-
-export default function CardAccount2 ({ service, userName, imgUrl }) {
+export default function CardAccount ({ service, userName, imgUrl }) {
 
     return (
         <View style={styles.card}>
@@ -11,39 +9,36 @@ export default function CardAccount2 ({ service, userName, imgUrl }) {
                 style={styles.logo} 
                 source={imgUrl}
             />
-            <Text style={styles.service}>{service}</Text>
-            <Text style={styles.username}>{userName}</Text>
-            <EvilIcons name="arrow-right" size={26} color="black" />
+            <View style={styles.content}>
+                <Text style={styles.service}>{service}</Text>
+                <Text style={styles.username}>{userName}</Text>
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        display: 'flex',
-        // borderStyle: 'solid',
-        // borderColor: '#EEEEEE',
-        // borderWidth: 1,
-        //width: '100%',
+        padding: 10,
+        borderStyle: 'solid',
+        borderColor: '#EEEEEE',
+        borderWidth: 1,
         flexDirection: 'row',
         gap: 15,
         borderRadius: 10,
-        alignItems: 'center',
-        marginVertical: 10
+        alignItems: 'center'
     },
     logo:{
-        width: 40,
-        height: 40
+        width: 60,
+        height: 60
+    },
+    content: {
+        gap: 6
     },
     service: {
-        fontSize: 17,
-        borderBottomWidth: 1,
-        borderStyle: 'solid',
-        borderColor: '#EEEEEE',
-        paddingVertical: 10
+        fontSize: 17
     },
     username: {
-        color: '#777777',
-        marginLeft: 'auto',
+        color: '#777777'
     }
 })
